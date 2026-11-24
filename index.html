@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>استوديو لحظة | نموذج تجريبي</title>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--brand:#a8154a;--brand-d:#6e0c2f;--soft:#fbe4ec;--bg:#fff7f9;--card:#fff;--ink:#2b1520;--mute:#7a5a67;--line:#efd3dc;--on:#fff;--ok:#1f7a4d;--okbg:#e3f4ea;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--brand:#e0527f;--brand-d:#f5a3bd;--soft:#3a1425;--bg:#1b0d14;--card:#27121b;--ink:#fbeaf0;--mute:#c9a3b2;--line:#4a2335;--on:#1b0d14;--ok:#7fd6a4;--okbg:#14301f;color-scheme:dark}}
+:root[data-theme="dark"]{--brand:#e0527f;--brand-d:#f5a3bd;--soft:#3a1425;--bg:#1b0d14;--card:#27121b;--ink:#fbeaf0;--mute:#c9a3b2;--line:#4a2335;--on:#1b0d14;--ok:#7fd6a4;--okbg:#14301f;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 Tajawal,Tahoma,sans-serif}
+.w{max-width:960px;margin:0 auto;padding:0 18px}
+.top{background:var(--brand-d);color:var(--bg);padding:10px 0}
+.top .w{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.top b{font-size:13px;margin-inline-end:auto}
+.rt{background:transparent;color:var(--bg);border:1px solid var(--bg);border-radius:999px;padding:4px 14px;font:500 14px Tajawal,Tahoma,sans-serif;cursor:pointer}
+.rt[aria-pressed="true"]{background:var(--bg);color:var(--brand-d)}
+.chip{margin:14px 0 0;display:inline-block;background:var(--soft);color:var(--brand-d);border-radius:999px;padding:3px 14px;font-size:14px;font-weight:700}
+h1,h2{font-family:"Aref Ruqaa",Tajawal,serif;color:var(--brand);margin:0 0 6px;line-height:1.2}
+h1{font-size:clamp(46px,11vw,80px)}h2{font-size:30px}h3{margin:0 0 4px;font-size:18px}
+.sub{color:var(--mute);margin:0 0 18px}
+.sec{padding:26px 0}
+.btn{display:inline-block;background:var(--brand);color:var(--on);border:0;border-radius:999px;padding:10px 24px;font:700 15px Tajawal,Tahoma,sans-serif;cursor:pointer}
+.btn:hover{background:var(--brand-d);color:var(--bg)}.btn.g{background:transparent;color:var(--brand);border:2px solid var(--brand)}.btn.g:hover{background:var(--soft);color:var(--brand-d)}
+:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;margin-bottom:14px}
+input,select,textarea{width:100%;padding:10px 13px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:16px Tajawal,Tahoma,sans-serif;margin-bottom:10px}
+label{display:block;font-weight:700;margin-bottom:3px}
+.err{color:#c0264f;font-size:14px;min-height:20px;margin-bottom:6px}
+.how{font-size:13px;color:var(--mute);background:var(--soft);border-radius:10px;padding:8px 12px;margin:10px 0}
+.cred{border:2px dashed var(--brand);border-radius:14px;padding:12px 16px;margin:12px 0;background:var(--card)}
+.cred code{background:var(--soft);padding:1px 8px;border-radius:6px;font-weight:700;direction:ltr;display:inline-block}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 14px}
+.tab{background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:6px 16px;font:500 14px Tajawal,Tahoma,sans-serif;cursor:pointer}
+.tab[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:var(--on)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px}
+.ph{aspect-ratio:3/4;border-radius:12px;background:linear-gradient(160deg,var(--a),var(--b));color:#fff;display:flex;align-items:flex-end;padding:8px;font-size:12px;position:relative;overflow:hidden}
+.t{aspect-ratio:3/4;border-radius:12px;overflow:hidden;position:relative;border:1px solid var(--line)}
+.t img{width:100%;height:100%;object-fit:cover;display:block}
+.t .lk{position:absolute;top:6px;inset-inline-start:6px;background:var(--brand);color:var(--on);border-radius:999px;font-size:11px;padding:1px 9px}
+.t .dl{position:absolute;bottom:6px;inset-inline-end:6px;background:var(--card);color:var(--brand);border:0;border-radius:999px;padding:2px 10px;font:700 12px Tajawal,Tahoma,sans-serif;cursor:pointer}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border:0}
+.bd{border-radius:999px;padding:2px 12px;font-size:13px;font-weight:700;background:var(--soft);color:var(--brand-d)}.bd.ok{background:var(--okbg);color:var(--ok)}
+.st{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}.st div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;text-align:center}.st b{font-size:26px;color:var(--brand);display:block}
+.pb{height:10px;background:var(--soft);border-radius:9px;overflow:hidden}.pb i{display:block;height:100%;width:0;background:var(--brand);transition:width .15s}
+.ok{background:var(--okbg);color:var(--ok);border-radius:12px;padding:10px 14px;margin-top:10px}
+.two{display:grid;gap:20px;grid-template-columns:1fr}@media(min-width:760px){.two{grid-template-columns:1fr 1fr}}
+.hero{text-align:center;padding:30px 0 6px}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="top"><div class="w"><b>نموذج تجريبي: لا يُحفظ شيء ولا يُرسل لأي جهة</b>
+<button class="rt" data-r="home" onclick="go('home')">1. الموقع العام</button>
+<button class="rt" data-r="adm" onclick="go(S.login?'dash':'login')">2. لوحة المصورة</button>
+<button class="rt" data-r="bride" onclick="go('bride')">3. صفحة العروس</button></div></div>
+<div class="w"><span class="chip" id="chip"></span><main id="app"></main></div>
+<script>
+var P=[["#c2185b","#6e0c2f"],["#e57fa3","#a8154a"],["#d4a0b4","#7a3a55"],["#f0a7bf","#c2185b"],["#9c3a62","#4a1226"],["#e8b4c4","#b5476c"]];
+var $=function(s){return document.querySelector(s)};
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function ph(i){var c=P[i%6];return"data:image/svg+xml;utf8,"+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="'+c[0]+'"/><stop offset="1" stop-color="'+c[1]+'"/></linearGradient></defs><rect width="600" height="800" fill="url(#g)"/><text x="300" y="420" font-size="70" fill="#fff" text-anchor="middle" font-family="sans-serif">'+(i+1)+'</text></svg>')}
+function rp(n,pv){var a=[];for(var i=0;i<n;i++)a.push({src:ph(i),name:"photo-"+(i+1)+".svg",priv:pv.indexOf(i)>-1});return a}
+var S={login:false,cur:0,draft:[],unl:0,unl2:0,tab:1,bk:[],ev:[
+{name:"سارة وأحمد",date:"2026-10-18",tok:"k7f2m9qx3a1z",pw:"2468",pw2:"1357",st:"opened",ph:rp(8,[6,7])},
+{name:"رنا",date:"2026-11-20",tok:"p4x8c1v6b0nq",pw:"8642",pw2:"3579",st:"new",ph:rp(6,[5])}]};
+var ST={"new":"لم يُسلَّم","sent":"أُرسل الرابط","opened":"فتحته العروس"};
+var CH={home:"تظهر لـ: أي زائرة، بدون دخول",login:"تظهر لـ: المصورة فقط",dash:"تظهر لـ: المصورة فقط، بعد تسجيل الدخول",nw:"تظهر لـ: المصورة فقط، بعد تسجيل الدخول",event:"تظهر لـ: المصورة فقط، بعد تسجيل الدخول",bride:"تظهر لـ: العروس فقط، برابط خاص وكلمة سر"};
+function go(h){if(location.hash==="#"+h)r();else location.hash=h}
+function r(){var h=location.hash.slice(1)||"home";if(["dash","nw","event"].indexOf(h)>-1&&!S.login)h="login";
+var v={home:vHome,login:vLogin,dash:vDash,nw:vNew,event:vEvent,bride:vBride};if(!v[h])h="home";
+$("#app").innerHTML=v[h]();$("#chip").textContent=CH[h];
+var g=h==="home"?"home":h==="bride"?"bride":"adm";document.querySelectorAll(".rt").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.r===g)});window.scrollTo(0,0)}
+addEventListener("hashchange",r);
+function vHome(){var K=["wed","eng","news"],L={wed:"عرس",eng:"خطوبة",news:"تغطية"},t="";
+for(var i=0;i<12;i++){var k=K[i%3],c=P[i%6];t+='<div class="ph" data-k="'+k+'" style="--a:'+c[0]+';--b:'+c[1]+'">'+L[k]+"</div>"}
+return'<div class="hero"><h1>استوديو لحظة</h1><p class="sub">تصوير أعراس وخطوبات ومناسبات، وصورك تصلك برابط خاص بك فقط.</p></div>'+
+'<section class="sec"><h2>أعمالنا</h2><div class="tabs" onclick="fl(event)"><button class="tab" data-f="all" aria-pressed="true">الكل</button><button class="tab" data-f="wed" aria-pressed="false">أعراس</button><button class="tab" data-f="eng" aria-pressed="false">خطوبات</button><button class="tab" data-f="news" aria-pressed="false">تغطيات</button></div><div class="grid" id="gal">'+t+'</div></section>'+
+'<section class="sec"><h2>احجزي موعدك</h2><form class="card" style="max-width:460px" onsubmit="return bk(event)"><label>نوع المناسبة</label><select id="kd"><option>حفل زفاف</option><option>خطوبة</option><option>مناسبة أخرى</option></select><label>التاريخ</label><input id="dt" type="date" required><label>رقم الهاتف</label><input id="tl" type="tel" inputmode="tel" placeholder="05XXXXXXXX" required><button class="btn" style="width:100%">إرسال الطلب</button><div class="ok" id="bo" hidden>وصل طلبك. افتحي «لوحة المصورة» لتري كيف يظهر عندها.</div></form><div class="how">خلف الكواليس: السيرفر يحفظ الطلب في قاعدة البيانات، ويظهر في لوحة المصورة فوراً.</div></section>'}
+function fl(e){var b=e.target.closest(".tab");if(!b)return;e.currentTarget.querySelectorAll(".tab").forEach(function(t){t.setAttribute("aria-pressed",t===b)});document.querySelectorAll("#gal .ph").forEach(function(p){p.hidden=b.dataset.f!=="all"&&p.dataset.k!==b.dataset.f})}
+function bk(e){e.preventDefault();S.bk.unshift({k:$("#kd").value,d:$("#dt").value,t:$("#tl").value});$("#bo").hidden=false;return false}
+function vLogin(){return'<section class="sec" style="max-width:440px"><h2>دخول المصورة</h2><p class="sub">هذه البوابة لصاحبة الاستوديو فقط.</p><div class="cred"><b>بيانات الدخول التجريبية</b><br>البريد: <code>photo@lahza.demo</code><br>كلمة السر: <code>Lahza123</code><br><button class="btn g" style="margin-top:8px;padding:4px 16px" onclick="$(\'#em\').value=\'photo@lahza.demo\';$(\'#pa\').value=\'Lahza123\'">تعبئة تلقائية</button></div><form class="card" onsubmit="return lg(event)"><label>البريد الإلكتروني</label><input id="em" type="email" dir="ltr"><label>كلمة السر</label><input id="pa" type="password" dir="ltr"><div class="err" id="le"></div><button class="btn" style="width:100%">دخول</button></form><div class="how">خلف الكواليس: السيرفر يقارن كلمة السر المشفّرة. وأي محاولة لفتح اللوحة بدون دخول تعيدك لهنا، جرّبي.</div></section>'}
+function lg(e){e.preventDefault();if($("#em").value.trim()==="photo@lahza.demo"&&$("#pa").value==="Lahza123"){S.login=true;go("dash")}else $("#le").textContent="البريد أو كلمة السر غير صحيحة.";return false}
+function vDash(){var n=S.ev.filter(function(e){return e.st==="new"}).length;
+var l=S.ev.map(function(e,i){return'<div class="row"><div><b>'+esc(e.name)+'</b><br><span class="sub" style="margin:0;font-size:14px">'+esc(e.date)+" · "+e.ph.length+' صورة</span></div><div><span class="bd'+(e.st==="opened"?" ok":"")+'">'+ST[e.st]+'</span> <button class="btn g" style="padding:3px 14px" onclick="S.cur='+i+';go(\'event\')">فتح</button></div></div>'}).join("");
+var b=S.bk.length?S.bk.map(function(x){return'<div class="row"><span>'+esc(x.k)+" · "+esc(x.d)+'</span><span dir="ltr">'+esc(x.t)+"</span></div>"}).join(""):'<p class="sub">لا طلبات بعد. أرسلي طلباً من «الموقع العام» وسيظهر هنا.</p>';
+return'<section class="sec"><div class="row" style="border:0"><h2>لوحة المصورة</h2><span><button class="btn" onclick="S.draft=[];go(\'nw\')">+ مناسبة جديدة</button> <button class="btn g" onclick="S.login=false;go(\'login\')">خروج</button></span></div>'+
+'<div class="st"><div><b>'+S.ev.length+'</b>مناسبات</div><div><b>'+n+'</b>لم تُسلَّم</div><div><b>'+S.bk.length+'</b>طلبات حجز</div></div>'+
+'<div class="card"><h3>المناسبات</h3>'+l+'</div><div class="card"><h3>طلبات الحجز</h3>'+b+'</div><div class="how">خلف الكواليس: السيرفر يقرأ المناسبات والطلبات من قاعدة البيانات، والصور نفسها في المخزن.</div></section>'}
+function vNew(){return'<section class="sec"><h2>مناسبة جديدة</h2><p class="sub">اكتبي اسم العروس، ثم ارفعي صورها.</p><div class="card"><label>اسم العروس</label><input id="bn" placeholder="مثال: لينا"><label>تاريخ المناسبة</label><input id="bd" type="date"><label>الصور</label><input id="fi" type="file" accept="image/*" multiple onchange="pk(this.files)"><button class="btn g" onclick="S.draft=rp(8,[]);th()">أو استخدمي صوراً تجريبية</button><div class="grid" id="th" style="margin-top:12px"></div><div class="pb" id="pbw" hidden style="margin-top:12px"><i id="pbi"></i></div><div id="pt" class="sub"></div><div class="err" id="be"></div><button class="btn" onclick="mk()">إنشاء ورفع الصور</button></div><div class="how">خلف الكواليس: المتصفح يصغّر الصور ثم يرفعها مباشرة إلى المخزن، والسيرفر يسجّل اسم الملف فقط. هنا تبقى على جهازك ولا تُرفع.</div></section>'}
+function pk(f){Array.prototype.forEach.call(f,function(x){S.draft.push({src:URL.createObjectURL(x),name:x.name,priv:false})});th()}
+function th(){$("#th").innerHTML=S.draft.map(function(p){return'<div class="t"><img src="'+p.src+'" alt=""></div>'}).join("")}
+function rnd(n){var s="";while(s.length<n)s+=Math.random().toString(36).slice(2);return s.slice(0,n)}
+function pin(){return String(Math.floor(1000+Math.random()*9000))}
+function mk(){var n=$("#bn").value.trim();if(!n){$("#be").textContent="اكتبي اسم العروس أولاً.";return}
+if(!S.draft.length){$("#be").textContent="اختاري صوراً من جهازك أو استخدمي الصور التجريبية.";return}
+$("#be").textContent="";$("#pbw").hidden=false;var p=0,t=setInterval(function(){p+=10;$("#pbi").style.width=p+"%";$("#pt").textContent="جارٍ الرفع "+p+"%";
+if(p>=100){clearInterval(t);S.ev.unshift({name:n,date:$("#bd").value||"—",tok:rnd(12),pw:pin(),pw2:pin(),st:"new",ph:S.draft});S.cur=0;S.draft=[];go("event")}},160)}
+function vEvent(){var e=S.ev[S.cur],lk="lahza.demo/e/"+e.tok,
+msg="مرحباً "+e.name+"، مبارك! صورك جاهزة 💗\nالرابط: "+lk+"\nكلمة السر: "+e.pw+"\nالرابط خاص بك، فلا تشاركيه مع أحد.";
+var g=e.ph.map(function(p,i){return'<div class="t" style="cursor:pointer" onclick="tg('+i+')" title="اضغطي للتبديل"><img src="'+p.src+'" alt="">'+(p.priv?'<span class="lk">خاصة</span>':"")+"</div>"}).join("");
+return'<section class="sec"><button class="btn g" onclick="go(\'dash\')">رجوع للوحة</button><div class="row" style="border:0"><h2>'+esc(e.name)+'</h2><span class="bd'+(e.st==="opened"?" ok":"")+'">'+ST[e.st]+'</span></div>'+
+'<div class="two"><div class="card"><h3>الرابط الخاص</h3><p dir="ltr" style="word-break:break-all;margin:0 0 8px">'+lk+'</p><p style="margin:0">كلمة سر الألبوم العام: <b>'+e.pw+'</b><br>كلمة سر الألبوم الخاص: <b>'+e.pw2+'</b></p><div class="how">الرابط طويل وعشوائي، ولا يظهر في جوجل، ويمكن إلغاؤه بضغطة.</div></div>'+
+'<div class="card"><h3>رسالة التسليم</h3><textarea id="ms" rows="5" readonly>'+esc(msg)+'</textarea><button class="btn" onclick="cp()">انسخي الرسالة</button> <button class="btn g" onclick="go(\'bride\')">افتحيه كما تراه العروس</button><div class="ok" id="co" hidden>نُسخت الرسالة، والحالة الآن: أُرسل الرابط.</div></div></div>'+
+'<div class="card"><h3>الصور ('+e.ph.length+')</h3><p class="sub">اضغطي على أي صورة لتحويلها بين عامة وخاصة. الخاصة لا تظهر إلا لصاحبة الحفل بكلمة سر ثانية.</p><div class="grid">'+g+"</div></div></section>"}
+function tg(i){var p=S.ev[S.cur].ph[i];p.priv=!p.priv;r()}
+function cp(){var e=S.ev[S.cur];try{navigator.clipboard.writeText($("#ms").value)}catch(x){}if(e.st==="new")e.st="sent";$("#co").hidden=false}
+function vBride(){var e=S.ev[S.cur];if(!e)return'<p class="sub">لا توجد مناسبات.</p>';
+var sel='<select onchange="S.cur=+this.value;S.unl=0;S.unl2=0;S.tab=1;r()">'+S.ev.map(function(x,i){return'<option value="'+i+'"'+(i===S.cur?" selected":"")+">"+esc(x.name)+"</option>"}).join("")+"</select>";
+var top='<section class="sec" style="max-width:520px;margin:0 auto"><div class="how">هكذا تفتح العروس الرابط الذي وصلها على واتساب:<br><span dir="ltr">lahza.demo/e/'+e.tok+'</span></div><label>اختاري عروساً لتجربة رابطها</label>'+sel;
+if(!S.unl)return top+'<div class="card" style="text-align:center"><h2>ألبوم '+esc(e.name)+'</h2><p class="sub">أدخلي كلمة السر التي وصلتك مع الرابط.</p><input id="p1" type="password" inputmode="numeric" placeholder="كلمة السر" style="text-align:center"><div class="err" id="e1"></div><button class="btn" style="width:100%" onclick="u1()">فتح الألبوم</button></div><div class="cred">كلمة السر التجريبية لهذا الألبوم: <code>'+e.pw+"</code></div></section>";
+var pub=e.ph.filter(function(p){return!p.priv}),prv=e.ph.filter(function(p){return p.priv});
+function gr(a){return a.length?'<div class="grid">'+a.map(function(p){return'<div class="t"><img src="'+p.src+'" alt=""><a class="dl" href="'+p.src+'" download="'+esc(p.name)+'" style="text-decoration:none">تحميل</a></div>'}).join("")+"</div>":'<p class="sub">لا صور هنا.</p>'}
+var body=S.tab===1?gr(pub)+'<button class="btn" style="width:100%;margin-top:14px" onclick="dall()">تحميل كل الصور العامة</button>':(S.unl2?gr(prv):'<div class="card" style="text-align:center"><p class="sub">هذا الألبوم لصاحبة الحفل فقط، وله كلمة سر ثانية.</p><input id="p2" type="password" inputmode="numeric" placeholder="كلمة السر الثانية" style="text-align:center"><div class="err" id="e2"></div><button class="btn" onclick="u2()">فتح</button><div class="cred">التجريبية: <code>'+e.pw2+"</code></div></div>");
+return top+'<h2>مبارك يا '+esc(e.name)+'!</h2><p class="sub">هذه صورك. الرابط خاص بك ولا يظهر في أي بحث.</p><div class="tabs"><button class="tab" aria-pressed="'+(S.tab===1)+'" onclick="S.tab=1;r()">الألبوم العام ('+pub.length+')</button><button class="tab" aria-pressed="'+(S.tab===2)+'" onclick="S.tab=2;r()">الألبوم الخاص ('+prv.length+')</button></div>'+body+'<div class="how">خلف الكواليس: السيرفر يتحقق من كلمة السر، ثم يطلب من المخزن روابط مؤقتة لكل صورة، وتنتهي بعد دقائق.</div></section>'}
+function u1(){var e=S.ev[S.cur];if($("#p1").value.trim()===e.pw){S.unl=1;e.st="opened";r()}else $("#e1").textContent="كلمة السر غير صحيحة."}
+function u2(){var e=S.ev[S.cur];if($("#p2").value.trim()===e.pw2){S.unl2=1;r()}else $("#e2").textContent="كلمة السر غير صحيحة."}
+function dall(){var a=document.querySelectorAll("a.dl");a.forEach(function(x,i){setTimeout(function(){x.click()},i*350)})}
+r();
+</script>
+</body>
+</html>
